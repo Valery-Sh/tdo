@@ -1,0 +1,2243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1251">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.4  (Win32)">
+	<META NAME="CREATED" CONTENT="20080611;12585300">
+	<META NAME="CHANGEDBY" CONTENT="Valery Shyshkin">
+	<META NAME="CHANGED" CONTENT="20080716;22281200">
+</HEAD>
+<BODY LANG="ru-RU" DIR="LTR">
+<H2><FONT FACE="Verdana"><FONT SIZE=4><B>Выражения</B></FONT></FONT></H2>
+<DL>
+	<DT><BR>
+</DL>
+<H3><FONT FACE="Verdana"><FONT SIZE=3>Типы выражений </FONT></FONT>
+</H3>
+<DL>
+	<DT><BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	Выражения используются в TDO
+	во многих случаях: вычисляемые поля, выражения</FONT></FONT><DT>
+	<FONT FACE="Verdana"><FONT SIZE=2>фильтра, списки полей сортировки,
+	валидаторы.</FONT></FONT><DT>
+	<BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	В TDO выражения
+	подразделяются на <I>арифметичечкие</I>,<I>строковые</I>, 
+	<I>сравнения</I>, <I>логические</I> и <I>списковые</I>.</FONT></FONT><DT>
+	<BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	<I>Арифметическое</I> 
+	выражение &mdash; это выражения, результатом вычисления которого</FONT></FONT><DT>
+	<FONT FACE="Verdana"><FONT SIZE=2>является число.</FONT></FONT><DT>
+	<BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	<I>Строковое</I>  выражение &mdash;
+	это выражения, результатом вычисления которого</FONT></FONT><DT>
+	<FONT FACE="Verdana"><FONT SIZE=2>является строка знаков.</FONT></FONT><DT>
+	<BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	<I>Выражение</I> <I>сравнения</I>
+	&mdash; это выражение, результатом вычисления которого</FONT></FONT><DT>
+	<FONT FACE="Verdana"><FONT SIZE=2>является булевое значение <FONT FACE="Times New Roman"><FONT SIZE=3><I>true</I></FONT></FONT>
+	или <FONT FACE="Times New Roman"><FONT SIZE=3><I>false</I></FONT></FONT>.</FONT></FONT><DT>
+	<BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	<I>Логическое</I> выражение 
+	&mdash; это выражение, результатом вычисления которого</FONT></FONT><DT>
+	<FONT FACE="Verdana"><FONT SIZE=2>является булевое значение <FONT FACE="Times New Roman"><FONT SIZE=3><I>true</I></FONT></FONT>
+	или <FONT FACE="Times New Roman"><FONT SIZE=3><I>false</I></FONT></FONT>.</FONT></FONT><DT>
+	<BR>
+</DL>
+<H3><FONT FACE="Verdana"><FONT SIZE=3>Использование круглых скобок</FONT></FONT></H3>
+<P ALIGN=JUSTIFY><FONT FACE="Arial"><FONT SIZE=3>	<FONT FACE="Verdana"><FONT SIZE=2>В
+выражении могут использоваться круглые скобки для группирования
+частей выражения и/или изменения порядка операций с любым уровнем
+вложенности, например:</FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=3><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>((A+6)
+* 4 &gt; B) AND (C+4) = 7</FONT></FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<H3></H3>
+<H3><FONT FACE="Verdana"><FONT SIZE=3>Арифметические выражения</FONT></FONT></H3>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=3>	<FONT SIZE=2>Результатом
+арифметического выражения может быть целое  значение типа
+</FONT><FONT FACE="Times New Roman"><FONT SIZE=3>java.util.Long</FONT></FONT><FONT SIZE=2>,
+число с плавающей запятой типа </FONT><FONT FACE="Times New Roman"><FONT SIZE=3>java.util.Double</FONT></FONT><FONT SIZE=2>
+или значение типа </FONT><FONT FACE="Times New Roman"><FONT SIZE=3>java.math.BigDecimal</FONT></FONT><FONT SIZE=2>.</FONT></FONT></FONT></P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операторы</I></FONT></FONT></H4>
+<DL>
+	<DT><BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	Допустимыми арифметическими
+	операторами выражения являются:</FONT></FONT><DT>
+	<BR>
+</DL>
+<UL>
+	<LI><FONT FACE="Verdana"><FONT SIZE=2>Сложение (<FONT COLOR="#800000"><B>+</B></FONT>),
+	например: <FONT FACE="Times New Roman"><FONT SIZE=3><B>column + 7</B></FONT></FONT></FONT></FONT><LI>
+	<FONT FACE="Verdana"><FONT SIZE=2>Вычитание (<FONT COLOR="#800000"><B>-</B></FONT>),
+	например: <FONT FACE="Times New Roman"><FONT SIZE=3><B>column &mdash;
+	7</B></FONT></FONT></FONT></FONT><LI>
+	<FONT FACE="Verdana"><FONT SIZE=2>Умножение (<FONT COLOR="#800000"><B>*</B></FONT>),
+	например: <FONT FACE="Times New Roman"><FONT SIZE=3><B>column * 7</B></FONT></FONT></FONT></FONT><LI>
+	<FONT FACE="Verdana"><FONT SIZE=2>Деление (<FONT COLOR="#800000"><B>/</B></FONT>),
+	например: <FONT FACE="Times New Roman"><FONT SIZE=3><B>column / 7</B></FONT></FONT></FONT></FONT></UL>
+<DL>
+	<DT><BR>
+</DL>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операнды</I></FONT></FONT></H4>
+<P><FONT FACE="Verdana"><FONT SIZE=3>	</FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=3>	<FONT SIZE=2>Операндом
+арифметического выражения может быть </FONT><FONT SIZE=2><I>числовой
+литерал</I></FONT><FONT SIZE=2>, </FONT><FONT SIZE=2><I>идентификатор
+</I></FONT><FONT SIZE=2> или </FONT><FONT SIZE=2><I>арифметическое
+выражение</I></FONT><FONT SIZE=2>. </FONT></FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=3><FONT SIZE=2>	</FONT><FONT SIZE=2><I>Числовой
+литерал</I></FONT><FONT SIZE=2> может иметь тип  </FONT><FONT FACE="Times New Roman"><FONT SIZE=3>int,long,
+float</FONT></FONT><FONT SIZE=2> или </FONT><FONT FACE="Times New Roman"><FONT SIZE=3>double</FONT></FONT><FONT SIZE=2>,
+например:</FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>		5 + 6L &mdash; 7.1F * 9D</FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=3><FONT SIZE=2>	</FONT><FONT SIZE=2><I>Идентификатор</I></FONT><FONT SIZE=2>
+в TDO framework может быть </FONT><FONT SIZE=2><I>именем колонки</I></FONT><FONT SIZE=2>
+схемы таблицы или </FONT><FONT SIZE=2><I>параметром</I></FONT><FONT SIZE=2>.
+</FONT><FONT SIZE=2><I><B>Параметр</B></I></FONT><FONT SIZE=2> &mdash;
+это идентификатор с преффиксом равным символу </FONT><FONT SIZE=2><B>:</B></FONT><FONT SIZE=2>
+(</FONT><FONT SIZE=2><I>двоеточие</I></FONT><FONT SIZE=2>). </FONT><FONT SIZE=2><I>Имя
+колонки</I></FONT><FONT SIZE=2> или </FONT><FONT SIZE=2><I>параметр</I></FONT><FONT SIZE=2>
+должны определять данные типа  </FONT><FONT FACE="Times New Roman"><FONT SIZE=3>java.util.Byte,
+java.util.Short, java.util.Integer, java.util.Long, java.util.Float,
+java.util.Double, java.math.BigDecimal.</FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Использование скобок в
+выражении</I></FONT></FONT></H4>
+<P><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Arial"><FONT SIZE=3>	<FONT FACE="Verdana"><FONT SIZE=2>В
+выражении могут использоваться круглые скобки для выделения и
+группирования частей выражения с любым уровнем вложенности, например:</FONT></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=3>		(( a + b ) * c ) /100</FONT></FONT></P>
+<P><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Преобразование типов</I></FONT></FONT></H4>
+<P><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Arial"><FONT SIZE=3>	<FONT FACE="Verdana"><FONT SIZE=2>В
+процессе вычисления значения </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>арифметического</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+выражения могут производится преобразования типов операндов
+выражения. Неформально правила преобразования могут быть представлены
+следующим образом:</FONT></FONT></FONT></FONT></P>
+<UL>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2>Если оба операнда в простом
+	выражении имеют целочисленный тип, то они преобразуются к типу <FONT FACE="Times New Roman"><FONT SIZE=3>Long</FONT></FONT>
+	и результат операции будет <FONT FACE="Times New Roman"><FONT SIZE=3>Long</FONT></FONT>.
+	Исключением является оператор <I>деления</I>. В таком случае оба
+	операнда преобразуются к типу <FONT FACE="Times New Roman"><FONT SIZE=3>Double</FONT></FONT>
+	и результатом является тип <FONT FACE="Times New Roman"><FONT SIZE=3>Double</FONT></FONT>.
+	</FONT></FONT>
+	</P>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2>Если один из операндов
+	имеет тип <FONT FACE="Times New Roman"><FONT SIZE=3>BigDecimal</FONT></FONT>,
+	то второй преобразуется к типу <FONT FACE="Times New Roman"><FONT SIZE=3>BigDecimal</FONT></FONT>
+	 и результат будет <FONT FACE="Times New Roman"><FONT SIZE=3>BigDecimal</FONT></FONT>.</FONT></FONT></P>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2>Если один из операндов
+	имеет тип <I>с плавающей точкой</I>, то оба операнда преобразуются к
+	типу <FONT FACE="Times New Roman"><FONT SIZE=3>Double</FONT></FONT>
+	и результатом будет тип <FONT FACE="Times New Roman"><FONT SIZE=3>Double</FONT></FONT>.</FONT></FONT></P>
+	<P></P>
+</UL>
+<UL>
+	<P></UL>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	Допустимы также данные типа
+<FONT FACE="Times New Roman"><FONT SIZE=3><B>String</B></FONT></FONT>,
+содержимое которых представляет собой <I>правильное число</I>. </FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><B>	Примеры. </B></FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=4>'273'
++ 6 </FONT></FONT></FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>		<I>Результат 279</I></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=4>	'273'
++ '6 '</FONT></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>		<I>Результат 279</I></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	Особый случай, когда значение
+одного из операндов или обоих сразу равно <FONT FACE="Times New Roman"><FONT SIZE=3><B>null</B></FONT></FONT>.
+В этом случае операнды с <FONT FACE="Times New Roman"><FONT SIZE=3><B>null</B></FONT></FONT>
+значениями считаются, как имеющие тип <FONT FACE="Times New Roman"><FONT SIZE=3><B>Integer</B></FONT></FONT>
+со значением равным <FONT FACE="Times New Roman"><FONT SIZE=3>Integer(0)</FONT></FONT>
+и дальнейшие действия по преобразованию типов проводятся согласно
+правилам, перечисленным выше.</FONT></FONT></P>
+<H3><FONT FACE="Verdana"><FONT SIZE=3>Строковые операторы</FONT></FONT></H3>
+<DL>
+	<DT><BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>	Существует единственный
+	строковый оператор, используемый в TDO.</FONT></FONT><DT>
+	<BR>
+</DL>
+<UL>
+	<LI VALUE=1><FONT FACE="Verdana"><FONT SIZE=2>Конкатенация (<FONT COLOR="#800000"><B>||
+	</B></FONT>), например: '<FONT FACE="Times New Roman"><FONT SIZE=3><B>ab'</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+	||</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B> 'bc' </B></FONT></FONT>в
+	результате дает строку <FONT FACE="Times New Roman"><FONT SIZE=3><B>'abcd'</B></FONT></FONT><FONT FACE="Verdana">.</FONT></FONT></FONT></UL>
+<DL>
+	<DT><BR>
+	<DT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Синтаксис:</U></FONT></FONT></FONT></DL>
+<P>
+<BR><BR>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>			<FONT FACE="Times New Roman"><FONT SIZE=4><I>expr-1</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>
+||  </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I>expr-2</I></FONT></FONT></B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B><FONT FACE="Verdana"><FONT SIZE=2>Если
+один или оба операнда равны </FONT></FONT><B><FONT FACE="Times New Roman"><I>null</I></FONT></B><FONT FACE="Verdana"><FONT SIZE=2>,
+то перед выполнением операции они преобразуются в </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>пустую</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+строку знаков, т.е. объект типа </FONT></FONT><B><FONT FACE="Times New Roman">java.lang.String</FONT></B><FONT FACE="Verdana"><FONT SIZE=2>
+нулевой длины.</FONT></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	При необходимости
+операнд(ы) преобразуюся в строку(и).</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Times New Roman"><FONT SIZE=3><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><B><FONT FACE="Verdana"><FONT SIZE=2>Пример</FONT></FONT></B><FONT FACE="Verdana"><FONT SIZE=2>.
+</FONT></FONT></FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Times New Roman"><FONT SIZE=3><FONT FACE="Verdana"><FONT SIZE=2>		'abc'
+</FONT></FONT><B><FONT FACE="Verdana"><FONT SIZE=2>||</FONT></FONT></B><FONT FACE="Verdana"><FONT SIZE=2>
+'12'</FONT></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Times New Roman"><FONT SIZE=3><FONT FACE="Verdana"><FONT SIZE=2>		'abc'
+</FONT></FONT><B><FONT FACE="Verdana"><FONT SIZE=2>||</FONT></FONT></B><FONT FACE="Verdana"><FONT SIZE=2>
+12</FONT></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	оба выражения
+дают одинаковый результат: 'abc12'</FONT></FONT><DL>
+	<DT>
+	<BR>
+</DL>
+<H3><FONT FACE="Verdana"><FONT SIZE=3>Операторы сравнения</FONT></FONT></H3>
+<DL>
+	<DT><BR>
+	<DT><FONT FACE="Verdana"><FONT SIZE=2>Допустимыми операторами
+	сравнения в выражении являются:</FONT></FONT><DT>
+	<BR>
+</DL>
+<UL>
+	<LI> <FONT FACE="Verdana"><FONT SIZE=2>Больше</FONT></FONT><FONT SIZE=2>
+	 </FONT><FONT FACE="Verdana"><FONT SIZE=2><B>(</B></FONT></FONT><FONT COLOR="#800000"><FONT FACE="Verdana"><FONT SIZE=2><B>
+	&gt;</B></FONT></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B> )</B></FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Меньше ( <FONT COLOR="#800000"><B>&lt;</B></FONT>
+	)</FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Равно ( <FONT COLOR="#800000"><B>=</B></FONT>
+	)</FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Не равно ( <FONT COLOR="#800000"><B>&lt;&gt;</B></FONT>
+	)</FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Больше или равно ( <FONT COLOR="#800000"><B>&gt;=</B></FONT>
+	)</FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Меньше или равно( <FONT COLOR="#800000"><B>&lt;=</B></FONT>
+	)</FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Проверка на равенство значению
+	<I>null</I> ( <FONT COLOR="#800000"><B>is null</B></FONT>)  ,
+	например: <FONT COLOR="#000080"><I>Col2 is null</I></FONT></FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Проверка на <I><B>не</B></I>
+	равенство значению  <I>null</I> (<FONT COLOR="#800000"><B> is not
+	null</B></FONT> ),  например: <FONT COLOR="#000080"><I>Col2 is null</I></FONT></FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Проверка на принадлежность
+	значения заданному интервалу ( <FONT COLOR="#800000"><B>between</B></FONT>
+	) например:  <FONT COLOR="#000080"><I>Col2 </I></FONT><FONT COLOR="#000080"><I><B>between</B></I></FONT><FONT COLOR="#000080"><I>
+	36 </I></FONT><FONT COLOR="#000080"><I><B>and</B></I></FONT><FONT COLOR="#000080"><I>
+	58</I></FONT></FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Проверка на равенство значения
+	одному из элементов списка ( <FONT COLOR="#800000"><B>in</B></FONT>
+	)  например: <FONT COLOR="#000080"><I>Col2 </I></FONT><FONT COLOR="#000080"><I><B>in</B></I></FONT><FONT COLOR="#000080"><I>
+	( 1,2,36,58)</I></FONT></FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Проверка на равенство <I>начальной</I>
+	<I>подстроки</I> строкового значения  заданной строке ( <FONT COLOR="#800000"><B>starting
+	with</B></FONT> ),  например:  <FONT COLOR="#000080"><I>Col2
+	</I></FONT><FONT COLOR="#000080"><I><B>starting with </B></I></FONT><FONT COLOR="#000080"><I>'Mr.'</I></FONT></FONT></FONT><LI>
+	 <FONT FACE="Verdana"><FONT SIZE=2>Проверка, содержит ли строка
+	заданную подстроку (<FONT COLOR="#800000"><B>containing</B></FONT>),
+	например: <FONT COLOR="#000080"><I>Col2 </I></FONT><FONT COLOR="#000080"><I><B>containing</B></I></FONT><FONT COLOR="#000080"><I>
+	'Mr.'</I></FONT></FONT></FONT><LI>
+	<FONT FACE="Verdana"><FONT SIZE=2>Проверка на соответствие
+	wildcard-шаблону ( <FONT COLOR="#800000"><B>like</B></FONT> ), 
+	например:                        <FONT COLOR="#000080"><I>	Col2 </I></FONT><FONT COLOR="#000080"><I><B>like</B></I></FONT><FONT COLOR="#000080"><I>
+	'%Mr%'</I></FONT></FONT></FONT><LI>
+	<FONT FACE="Verdana"><FONT SIZE=2>Проверка на соответствие
+	регулярному выражению ( <FONT COLOR="#800000"><B>regex</B></FONT> ),
+	 например: <FONT COLOR="#000080"><I>Col2 </I></FONT><FONT COLOR="#000080"><I><B>regex</B></I></FONT><FONT COLOR="#000080"><I>
+	'[0-9]{1,6}'</I></FONT></FONT></FONT></UL>
+<DL>
+	<DT><BR>
+	<DT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2><B>Примечание.<FONT SIZE=2>
+	</FONT></B><FONT SIZE=2>Операторы могут быть набраны в любом
+	регистре, например:</FONT></FONT></FONT></FONT><DT>
+	<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2><FONT COLOR="#000080"><FONT SIZE=2>		Starting
+	With </FONT></FONT><FONT SIZE=2>или </FONT><FONT COLOR="#000080"><FONT SIZE=2><I>StArTiNg
+	WiTh</I></FONT></FONT></FONT></FONT></FONT><DT>
+	<BR>
+</DL>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Преобразование типов</I></FONT></FONT></H4>
+<P><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><I>	</I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>В
+процессе вычисления значения операции сравнения могут производится
+преобразования типов операндов выражения. </FONT></FONT></FONT></FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Для
+</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>стандартных</B></FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+операций сравнения, таких как </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=4><B>&lt;,&lt;=,&gt;,&gt;=,=,&lt;&gt;
+</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>действуют
+следующие правила:</FONT></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2><B>Примечание</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2>.
+Для ясности и общности будем  считать, что при сравнении результат
+получается одним из 0 или 1 или -1, как для методов </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2>.</FONT></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT></P>
+<UL>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	оба операнда равны </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>null</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то результат всегда 0;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	первый операнд равен </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>null</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	а второй отличен от </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>null</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то результат всегда -1; </FONT></FONT></FONT></FONT></FONT></FONT>
+	</P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	второй операнд равен </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>null</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	 а первый отличен от </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>null</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то результат всегда 1; </FONT></FONT></FONT></FONT></FONT></FONT>
+	</P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	первый операнд равен второму в смысле java-операции сравнения   </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>==</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	, то считается, что операнды равны ( </FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>результат
+	 0</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>)
+	;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	один из операндов имеет тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.math.BigDecimal</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то другой операнд преобразуется, если необходимо, в тип
+	j</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>ava.math.BigDecimal</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	один из операндов имеет тип j</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>ava.lang.Double</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то другой операнд преобразуется, если необходимо, в тип
+	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2><B>java.lang.Double</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	один из операндов имеет тип j</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>ava.lang.Float</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то оба операнда преобразуются,в тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.Double</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	тип одного из операндов </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.Byte,
+	java.lang.Short, java.lang.Integer</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то </FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>оба</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	операнда преобразуются, если необходимо, в тип    </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.Long</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	оба операнда имеют тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.util.Date</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то результат определяется методом Date.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>(</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Date</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>);</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	оба операнда имеют тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.sql.Timestamp</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то результат определяется методом </FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Timestamp</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>.compareTo(</B></FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Timestamp</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>)</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	первый операнд имеют тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.sql.Timestamp</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	а второй операнд </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.util.Date</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то  результат аналогичен выполнению метода
+	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>((</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Timestamp</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>)firstValue).</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>((</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Date</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>)secondValue)</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	первый операнд имеют тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.util.Date</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	а второй операнд </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.sql.Timestamp</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то      результат аналогичен выполнению
+	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>((</B></FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Timestamp</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>)secondValue).compareTo((</B></FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Date</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>)firstValue)</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	и,  если значение результата равно 0, то возвращается 0. </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>Иначе</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	возвращается результат с </FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>противоположным
+	знаком</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>;</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	один из операндов имеет тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.util.Date</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	а второй операнд </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.String</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то </FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>строковый</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	операнд  преобразуется в тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.util.Date</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>.
+	Результат аналогичен выполнению  метода </FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Date</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>(</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>Date</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>);</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	один из операндов имеет тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.sql.Timestamp</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	а второй операнд </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.String</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	то строковый операнд преобразуется в тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.sql.Timestamp</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	и Результат аналогичен выполнению  метода
+	</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>java.sql.Timestamp</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>(</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>java.sql.Timestamp</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>);</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	оба операнда имеют тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.String</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	то возвращается результат выполнения метода
+	</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>String</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>(</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>String</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	первый операнд имеет тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.String</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>,
+	 то второй преобразуется в строку методом</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>
+	</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>
+	</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	  и возвращается результат выполнения метода
+	</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>String</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>(</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>String</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>);</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	второй операнд имеет тип </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>java.lang.String</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	 то первый преобразуется в строку методом </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	  и возвращается результат выполнения метода
+	</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>String</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>compareTo</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>(</FONT></FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>String</FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>).</FONT></FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT><FONT COLOR="#000080"><FONT FACE="Arial"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	выполнено условие
+		</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>firstValue.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>getClass()</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>equals</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>(secondValue.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>getClass()</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>)
+	);</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+	   и если  firstValue.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>equals</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>(secondValue),
+	то возвращается 0.  В противном случае, т.е. ни одно из условий выше
+	не выполнено,   возвращается -1.</FONT></FONT></FONT></FONT></FONT></FONT></P>
+</UL>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операция <FONT COLOR="#800000">BETWEEN</FONT></I></FONT></FONT></H4>
+<P><FONT COLOR="#800000">	</FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=4><I>expr</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+[</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>NOT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>]
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>  </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>BETWEEN</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>
+ </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B> </B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I>expr-1
+</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>AND</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>
+</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I>expr-2</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+</B></FONT></FONT></FONT></FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Проверяет,
+лежит ли значение выражения  <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в интервале ограниченном левой границей <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr-1
+</B></I></FONT></FONT>и правой <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>
+expr-2 </B></I></FONT></FONT>, включая сами границы.</FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	В
+выражении <FONT FACE="Times New Roman"><FONT SIZE=3><B>BETWEEN</B></FONT></FONT>
+участвуют <I>три</I> операнда. В процессе вычисления могут
+производится преобразования типов. <I>Первый</I> операнд сравнивается
+со <I>вторым</I> по правилам &quot;<B>&gt;=</B>&quot; - <I>больше или
+равно</I>, а также с <I>третьим</I> по правилам &quot;<B>&lt;=</B>&quot;
+ - <I>меньше или равно</I>. Преобразование типов, при этом,
+проводится как для <I>стандартных</I> операций сравнения.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример
+1.</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	'12'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>BETWEEN</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+11 </FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>AND</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+'20'</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>		12
+  </FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>BETWEEN</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+11 </FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>AND</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+20</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		Результат
+равен <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true. </B></I></FONT></FONT></FONT></FONT></FONT>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример
+2.</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	'12'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>BETWEEN</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+11 </FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>AND</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+'2'</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>		</FONT></FONT>Результат
+равен<FONT FACE="Times New Roman"><FONT SIZE=3> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true.
+</B></I></FONT></FONT>Это потому, что, как мы знаем, строка '12'
+сравнивается со строкой '2' по правилам для <I>стандартных</I>
+операций сравнения. Но тогда сравнение производится методом
+<FONT FACE="Times New Roman"><FONT SIZE=3>java.lang.String.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>compareTo.
+</B></FONT></FONT>В этом случае, разумеется, строка '2' больше строки
+'12'.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Verdana">	Операция
+</FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>NOT BETWEEN</B></FONT></FONT><FONT FACE="Verdana"><B>
+</B></FONT><FONT FACE="Verdana">возвращает </FONT><I><FONT FACE="Times New Roman"><FONT SIZE=3><B>true</B></FONT></FONT></I><FONT FACE="Verdana">,
+когда операция </FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>BETWEEN</B></FONT></FONT><FONT FACE="Verdana">
+возвращает </FONT><I><FONT FACE="Times New Roman"><FONT SIZE=3><B>false</B></FONT></FONT></I><FONT FACE="Verdana">
+и наоборот.</FONT></FONT></FONT></FONT></P>
+<H3></H3>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операция <FONT COLOR="#800000">IN</FONT></I></FONT></FONT></H4>
+<P><FONT COLOR="#800000">	</FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+[</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>NOT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>]
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>  IN   </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>(
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr-1,
+expr-2, ..., expr-n</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+)</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Проверяет,
+содержится ли значение выражения  <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в списке. Элементы списка <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr-1,
+..., expr-n </B></I></FONT></FONT>также могут быть выражениями.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равен <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то, если список  содержит выражение со значением <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+результат будет <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>.
+</FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Тип
+выражения <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+может отличаться от типа элементов, а каждый элемент может быть
+<I>любого</I> типа. Сравнение производится <I><U>по-элементно</U></I>
+на равенство. При этом, для каждого сравнения может производится
+преобразование типов, как принято для стандартной операции <B>=</B>
+'<I>равно</I>'.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример.</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	'12'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>IN</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+( 3, '7' ,12)		</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		Результат
+равен <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT><I>,
+</I>хотя в списке содержится целое значение 12, проверяемое строковое
+значение преобразуется в <FONT FACE="Times New Roman"><FONT SIZE=3><B>Integer</B></FONT></FONT>.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Операция
+<FONT FACE="Times New Roman"><FONT SIZE=3><B>NOT IN</B></FONT></FONT><B>
+</B>возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>,
+когда операция <FONT FACE="Times New Roman"><FONT SIZE=3><B>IN</B></FONT></FONT>
+возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false</B></I></FONT></FONT>
+и наоборот.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операция <FONT COLOR="#800000">Starting
+With</FONT></I></FONT></FONT></H4>
+<P><FONT COLOR="#800000">	</FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT>-<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+[</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>NOT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>]
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>Starting
+With</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>  </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>-</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr-1</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Проверяет,
+содержится ли в начале значения выражения  <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в подстрока          <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr-1.</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+ или  <FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>-</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr-1
+</B></I></FONT></FONT>или<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>
+</B></I></FONT></FONT>оба<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>
+</B></I></FONT></FONT>равен/равны<I><B> </B></I><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null
+ </B></I></FONT></FONT>то, выражение равно  <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false.</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Перед
+выполнением сравнения оба операнда выражения преобразуются, если
+необходимо, в строку знаков. </FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример.</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	'1234'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>starting
+with</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3> 12	</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		Результат
+равен <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true.  </B></I></FONT></FONT>Целое
+значение 12 второго операнда преобразуется в <FONT FACE="Times New Roman"><FONT SIZE=3><B>String
+'12'</B></FONT></FONT>.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример.</B></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>starting
+with</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3> 12	</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>		</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>starting
+with</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	'12'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>starting
+with</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		Результат
+всегда равен <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false</B></I></FONT></FONT><I><B>.</B></I></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Операция
+<FONT FACE="Times New Roman"><FONT SIZE=3><B>NOT STARTING WITH</B></FONT></FONT><B>
+</B>возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>,
+когда операция <FONT FACE="Times New Roman"><FONT SIZE=3><B>STARTING
+WITH</B></FONT></FONT> возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false</B></I></FONT></FONT>
+и наоборот.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операция <FONT COLOR="#800000">Containing</FONT></I></FONT></FONT></H4>
+<P><FONT COLOR="#800000">	</FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT>-<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+[</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>NOT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>]
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>CONTAINING</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>
+ </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>-</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr-1</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Проверяет,
+содержится ли в строке  <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+ подстрока  <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr-1.</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+ или  <FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>-</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr-1
+</B></I></FONT></FONT>или<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>
+</B></I></FONT></FONT><I><B>оба</B></I><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>
+</B></I></FONT></FONT>равен/равны<I><B> </B></I><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null
+ </B></I></FONT></FONT>то, выражение равно  <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false.</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Перед
+выполнением сравнения оба операнда выражения преобразуются, если
+необходимо, в строку знаков. </FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример.</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	'1234'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>containing</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+23	</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>		'1234'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>containing</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+34	</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>		'1234'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>containing</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+'1234'	</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		Результат
+равен <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true.  </B></I></FONT></FONT></FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример.</B></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>containing</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+12	</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>		</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>containing</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><FONT FACE="Times New Roman"><FONT SIZE=3>	'12'
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>containing</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>null</I></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		Результат
+всегда равен <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false</B></I></FONT></FONT><I><B>.</B></I></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Операция
+<FONT FACE="Times New Roman"><FONT SIZE=3><B>NOT CONTAINING</B></FONT></FONT><B>
+</B>возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>,
+когда операция <FONT FACE="Times New Roman"><FONT SIZE=3><B>CONTAINING</B></FONT></FONT>
+возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false</B></I></FONT></FONT>
+и наоборот.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операция <FONT COLOR="#800000">LIKE</FONT></I></FONT></FONT></H4>
+<P><FONT COLOR="#800000">	</FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT>-<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+[</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>NOT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>]
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>LIKE</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>
+ </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str-expr-1</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	Выполняет сравнение </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=3>-</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=3>
+</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>по заданному образцу
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>-</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr-1.</B></I></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I><B>str-expr-1
+</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>это строковое
+выражение, содержащее </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>образец</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>	Условия </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+предназначены для сопоставления </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>символьных
+строк </I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>с заданным
+</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>образцом</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	Символы, представляющие
+значение </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr-1</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+трактуются:</FONT></FONT></P>
+<UL>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2>Символ </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>подчеркивания</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+	&quot;</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>_</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>&quot;
+	обозначает </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>любой</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+	</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>отдельный</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+	символ;</FONT></FONT></P>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2>Знак </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>процента</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+	&quot;</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>%</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>&quot;
+	представляет </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>любую</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+	последовательность из </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I><B>k</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+	 символов (</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>где </I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I><B>k</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>
+	может быть равно нулю</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>);</FONT></FONT></P>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2>Все другие символы
+	обозначают </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>сами
+	себя</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></P>
+</UL>
+<P>    <FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>Пример
+1</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>. Выражение:</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>		</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>'Bill
+Gates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'%Gates'</FONT></FONT></P>
+<P> <FONT FACE="Verdana"><FONT SIZE=2>		Даст </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+для приведенного выше выражения. Строка </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+слева от ключевого слова </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=2><B>LIKE</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+может содержать любые символы перед словом 'Gates'.</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2><B>	Пример 2</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.
+Выражение:</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>		</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>'Bill
+Gates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'B%ates'</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>		 Даст </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+для приведенного выше выражения. Строка </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr
+</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2> слева от
+ключевого слова </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>LIKE</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+может содержать </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>любые</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+символы между символом '</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>B</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>'
+и строкой '</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>ates</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>',
+например, </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>'Bob
+Lates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'B%ates'</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2> также даст
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2><B>	Пример 3</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.
+Выражение:</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>		</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>'Bill
+Gates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'Bill _ates'</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>		 Даст </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+для приведенного выше выражения. Строка слева от ключевого слова </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+может содержать </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>любой</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+символ вместо  символа '</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>G</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>',
+например,                   </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>	'Bill
+Lates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'Bill _ates'</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2> также
+даст </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><B>	Пример 4.</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+Выражение:</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>	'Bob
+Gates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'B% Gate_'</FONT></FONT></P>
+<P>     <FONT FACE="Verdana"><FONT SIZE=2>		 Даст </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+для приведенного выше выражения. Строка слева от ключевого слова </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>LIKE</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+может содержать </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>любую</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>строку</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+после символа '</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>B</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>',
+ затем следует </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I><B>пробел</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>,
+строка '</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><B>Gate</B></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>'
+и </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>любой</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>
+</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>символ</I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>.</FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Операция
+<FONT FACE="Times New Roman"><FONT SIZE=3><B>NOT LIKE</B></FONT></FONT><B>
+</B>возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>,
+когда операция <FONT FACE="Times New Roman"><FONT SIZE=3><B>LIKE</B></FONT></FONT>
+возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false</B></I></FONT></FONT>
+и наоборот.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Операция <FONT COLOR="#800000">RegEx</FONT></I></FONT></FONT></H4>
+<P><FONT COLOR="#800000">	</FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str</B></I></FONT></FONT>-<FONT FACE="Times New Roman"><FONT SIZE=4><I><B>expr</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+[</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>NOT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>]
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>REGEX</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4>
+ </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><B>
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=4><I><B>str-expr-1</B></I></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	Выполняет сравнение </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=3>-</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=3>
+</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>по заданному образцу
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>-</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr-1.
+</B></I></FONT></FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I><B>str-expr-1
+</B></I></FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2>это строковое
+выражение, содержащее </FONT></FONT><FONT FACE="Verdana"><FONT SIZE=2><I>регулярное
+выражение.</I></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT COLOR="#000000"> <FONT FACE="Verdana"><FONT SIZE=2>	<B>Пример
+1.</B> Выражение:</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000">     <FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=3>'B.
+Gates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>regex</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'(B(ill)?|B.) Gates'</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000">     <FONT FACE="Verdana"><FONT SIZE=2>		Вернет
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>
+ для приведенного выше выражения. Точно также вернет <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>
+выражение:</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000">     <FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=3>'Bill
+Gates' </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>regex</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'(B(ill)?|B.) Gates'</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000">   </FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<B>Пример
+2</B>. Выражение:</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000">     <FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	'1'
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>RegEx</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'[0-9]{1,5}'</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>		'12'
+<B>RegEx</B> '[0-9]{1,5}'</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>		'123'
+<B>RegEx</B> '[0-9]{1,5}'</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>		'1234'
+<B>RegEx</B> '[0-9]{1,5}'</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>		'12345'
+<B>RegEx</B> '[0-9]{1,5}'</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		Все
+приведенные выражения дают при вычислении <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>.
+В них проверяется <I>левый</I> операнд на то, что его символы должны
+быть <I>цифрами</I> и  количество цифр от <B>1</B> до <B>5</B>. Так
+что следующее выражение даст	<FONT FACE="Times New Roman"><FONT SIZE=2><I><B>false</B></I></FONT></FONT>.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=3>'123456'
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>RegEx</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+'[0-9]{1,5}'</FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Операция
+<FONT FACE="Times New Roman"><FONT SIZE=3><B>NOT REGEX</B></FONT></FONT><B>
+</B>возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>true</B></I></FONT></FONT>,
+когда операция <FONT FACE="Times New Roman"><FONT SIZE=3><B>REGEX</B></FONT></FONT>
+возвращает <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>false</B></I></FONT></FONT>
+и наоборот.</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR><BR>
+</P>
+<H3><FONT FACE="Arial">Логические операторы</FONT></H3>
+<DL>
+	<DT><BR>
+	<DT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Допустимыми
+	логическими операторами выражения являются:</FONT></FONT></FONT><DT>
+	<BR>
+</DL>
+<UL>
+	<LI><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#800000"><B>AND</B></FONT><FONT COLOR="#000000">
+	- логическое &quot;И&quot;</FONT></FONT></FONT><LI>
+	<FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#800000"><B>OR</B></FONT><FONT COLOR="#000080"><I>
+	</I></FONT><FONT COLOR="#000080">- </FONT><FONT COLOR="#000000">логическое
+	&quot;ИЛИ&quot;</FONT></FONT></FONT><LI>
+	<FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#800000"><B>NOT</B></FONT><FONT COLOR="#000080"><I>
+	</I></FONT><FONT COLOR="#000000">- логическое </FONT><FONT COLOR="#000000"><I>отрицание</I></FONT></FONT></FONT></UL>
+<DL>
+	<DT><BR>
+	<DT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2><B>Примечание.<FONT SIZE=2>
+	</FONT></B><FONT SIZE=2>Операторы могут быть набраны в любом
+	регистре, например:</FONT></FONT></FONT></FONT><DT>
+	<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=2><FONT COLOR="#000080"><FONT SIZE=2>		</FONT></FONT><FONT COLOR="#000080"><FONT SIZE=2><B>And</B></FONT></FONT><FONT COLOR="#000080"><FONT SIZE=2>
+	</FONT></FONT><FONT SIZE=2>или </FONT><FONT COLOR="#000080"><FONT SIZE=2><I><B>oR</B></I></FONT></FONT></FONT></FONT></FONT><DT>
+	<BR>
+	<DT><BR>
+</DL>
+<H3><FONT FACE="Verdana"><FONT SIZE=3>Списковый оператор</FONT></FONT></H3>
+<DL>
+	<DT><BR>
+	<DT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Списковым
+	оператором является оператор, представленный запятой ( <FONT COLOR="#800000"><B>,
+	</B></FONT>). Оператор применяется для построения выражений списка,
+	например: <FONT COLOR="#000080"><FONT FACE="Times New Roman"><FONT SIZE=3>A</FONT></FONT></FONT><FONT COLOR="#800000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>,</B></FONT></FONT></FONT><FONT COLOR="#000080"><FONT FACE="Times New Roman"><FONT SIZE=3>1</FONT></FONT></FONT><FONT COLOR="#800000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>,</B></FONT></FONT></FONT><FONT COLOR="#000080"><FONT FACE="Times New Roman"><FONT SIZE=3>2+7</FONT></FONT></FONT>
+	-  это  списковое</FONT></FONT></FONT><DT>
+	<FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>выражение,
+	значением которого является объект типа <FONT COLOR="#000080"><FONT FACE="Times New Roman"><FONT SIZE=3>tdo.expr.ValueList</FONT></FONT></FONT>.
+	</FONT></FONT></FONT>
+	<DT><BR>
+	<DT><BR>
+</DL>
+<H3></H3>
+<H3><FONT FACE="Verdana"><FONT SIZE=3>Оператор <FONT COLOR="#800000"><I>AS</I></FONT></FONT></FONT></H3>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=3><I>	</I><FONT SIZE=2>Оператор
+применяется для назначения имени колонке в </FONT><FONT SIZE=2><I><B>select</B></I></FONT><FONT SIZE=2>-операторе,
+когда </FONT></FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>требуется изменить имя колонки
+взамен назначаемому по умолчанию.</FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<H3><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=3>Функции в
+выражениях</FONT></FONT></FONT></H3>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Выражение
+может содержать в качестве операндов <I>вызовы функций</I>.  <I>Функция</I>
+состоит из <I>идентификатора</I> и <I>списка параметров</I>,
+разделенных запятыми. <I>Список параметров</I> заключен в круглые
+скобки. В качестве параметров могут использоваться ваыражения. Состав
+параметров, их количество и типы определяются синтаксисом и
+семантиков конкретной функции.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Условно
+функции можно разделить на группы:</FONT></FONT></FONT></P>
+<UL>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Функции
+	обработки строк</FONT></FONT></FONT></P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Функции
+	преобразования типов</FONT></FONT></FONT></P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Функции
+	состояния</FONT></FONT></FONT></P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Специальные
+	функции</FONT></FONT></FONT></P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Функции
+	пакета <FONT FACE="Times New Roman"><FONT SIZE=3><B>java.Math</B></FONT></FONT></FONT></FONT></FONT></P>
+</UL>
+<P><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Функции обработки строк	</I></FONT></FONT></H4>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	В следующей
+таблице приведены функции,  специально предназначенные для обработки
+строк.</FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0>
+	<COL WIDTH=48*>
+	<COL WIDTH=49*>
+	<COL WIDTH=158*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Имя функции</FONT></FONT></TD>
+		<TD WIDTH=19% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Алиасы</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Описание</FONT></FONT></TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>UpperCase
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Upper, U</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Переводит
+			символы строки в верхний регистр </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>LowerCase</B></FONT></FONT></TD>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Lower, L
+			</FONT></FONT>
+		</TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Переводит
+			символы строки в нижний регистр </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Proper
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>P</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=LEFT><FONT FACE="Verdana"><FONT SIZE=2>Переводит самый
+			первый символ строки в верхний регистр</FONT></FONT></TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Header</B></FONT></FONT></TD>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Hd</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Переводит самый
+			первый символ каждого слова строки в верхний регистр </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Trim </B></FONT></FONT>
+		</TD>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Tr</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Отсекает
+			крайние символы пробела слева и справа строки </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Padl </B></FONT></FONT>
+		</TD>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>PL</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>В зависимости
+			от параметров функции и типа операнда добавляет к строке слева
+			заданное количество символов </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Padr</B></FONT></FONT></TD>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>PR</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>В зависимости
+			от параметров функции и типа операнда добавляет к строке справа
+			заданное количество символов </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Substring
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Substr</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Выделяет
+			подстроку из заданной строки </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>NumberFormat
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>NumFormat,
+			NF</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Форматирует
+			числовое значение согласно заданному шаблону и возвращает
+			строковое представление </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>DateFormat</B></FONT></FONT></TD>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>DF</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Форматирует
+			значение даты согласно заданному шаблону и возвращает строковое
+			представление </FONT></FONT>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>UpperCase</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>UpperCase(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>str-expr
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U> <FONT FACE="Times New Roman"><FONT SIZE=3><B>U, Upper</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Переводит
+символы строки в верхний регистр.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2>						</FONT></FONT></P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>LowerCase</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>LowerCase(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>str-expr
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B>L, Lower</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Переводит
+символы строки в нижний регистр.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Proper</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Proper(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>str-expr
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B> P</B></FONT></FONT></FONT></FONT></FONT></P>
+<DL>
+	<DT><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Переводит
+	самый первый символ строки в верхний регистр.</FONT></FONT></FONT><DT><P>
+	<BR>
+</DL>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Header</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Header(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>str-expr
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>,delimeters</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B> Hd</B></FONT></FONT></FONT></FONT></FONT></P>
+<DL>
+	<DT><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Переводит
+	самый первый символ каждого слова строки в верхний регистр.</FONT></FONT></FONT><DT><P>
+	<BR>
+</DL>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Параметр
+<FONT FACE="Times New Roman"><FONT SIZE=3><I>delimeters</I></FONT></FONT>
+определяет символы-разделители слов в строке. Если  <FONT FACE="Times New Roman"><FONT SIZE=3><I>delimeters</I></FONT></FONT>
+опущен, то по умолчанию он принимает строковое значение: <B>&quot;
+.,:-_;&quot;</B>, или
+<FONT FACE="Times New Roman"><FONT SIZE=3><I>пробел,точка,запятая,двоеточие,дефис,подчеркивание,
+точка с запятой</I></FONT></FONT>.</FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Trim</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Trim(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>str-expr</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B> TR</B></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Отсекает
+крайние символы пробела слева и справа строки. </FONT></FONT></FONT>
+<DL>
+	<DT><P><BR>
+</DL>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>str-expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Padl</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Times New Roman"><FONT SIZE=3>		PADL(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>,
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>size</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>
+[ , </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>char</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>])</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B> PL</B></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Добавляет
+к строке <I>слева</I> количество символов <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>char</B></I></FONT></FONT>,
+чтобы длина строки стала равной <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>size</B></I></FONT></FONT>.
+Если не задан символ-заполнитель <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>char</B></I></FONT></FONT>,
+то:</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<UL>
+	<LI><P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+	имеет тип <FONT FACE="Times New Roman"><FONT SIZE=3><B>Number</B></FONT></FONT>,
+	то, по умолчанию дополнение производится символом '0'.</FONT></FONT></FONT><LI><P ALIGN=JUSTIFY>
+	<FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+	имеет тип отличный от <FONT FACE="Times New Roman"><FONT SIZE=3><B>Number</B></FONT></FONT>,
+	то, по умолчанию дополнение производится символом <I>пробела</I>.</FONT></FONT></FONT></UL>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Padr</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Times New Roman"><FONT SIZE=3>		PADR(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>,
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>size</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>
+[ , </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>char</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>])</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B> PR</B></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Добавляет
+к строке <I>справа</I> количество символов <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>char</B></I></FONT></FONT>,
+чтобы длина строки стала равной <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>size</B></I></FONT></FONT>.
+Если не задан символ-заполнитель <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>char</B></I></FONT></FONT>,
+то:</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<UL>
+	<LI VALUE=1><P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если
+	<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+	имеет тип <FONT FACE="Times New Roman"><FONT SIZE=3><B>Number</B></FONT></FONT>,
+	то, по умолчанию дополнение производится символом '0'.</FONT></FONT></FONT><LI><P ALIGN=JUSTIFY>
+	<FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+	имеет тип отличный от <FONT FACE="Times New Roman"><FONT SIZE=3><B>Number</B></FONT></FONT>,
+	то, по умолчанию дополнение производится символом <I>пробела</I>.</FONT></FONT></FONT></UL>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><H5>
+<FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Substring</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Times New Roman"><FONT SIZE=3>		Substring(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>source</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>,
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>startpos</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>
+[ , </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>endpos
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>] )</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B> Substr</B></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Выделяет
+<I>подстроку</I>, начиная с позиции <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>startpos</B></I></FONT></FONT>
+и заканчивая позицией <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>endpos</B></I></FONT></FONT>
+из заданной строки <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>source</B></I></FONT></FONT>.
+Если параметр <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>endpos</B></I></FONT></FONT>
+не задан, то принимается равным <FONT FACE="Times New Roman"><FONT SIZE=3><I>source</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>.length
+- 1</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>. </FONT></FONT></FONT></FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><B>Примечание</B></FONT><FONT FACE="Times New Roman">.
+Нумерация символов начинается с 0.	</FONT></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>source</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразования <U>не</U> производится. Для остальных значений
+выражение преобразуется в строку применением метода <FONT FACE="Times New Roman"><FONT SIZE=3><B>toString()</B></FONT></FONT>.
+</FONT></FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>NumberFormat</B></I></FONT></FONT></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>		</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>NumberFormat(</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>
+, [ </B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>pattern
+</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>[</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>,
+decseparator</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>[
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>,
+groupseparator </I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>]]
+] )</B></FONT></FONT></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B> NumFormat,
+NF</B></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Форматирует
+числовой операнд <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+согласно заданному шаблону <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>
+и преобразует его в <I>строковое</I> значение.</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	По умолчанию
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>
+равен &quot;###.########&quot;,  разделитель целой и дробной частей
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>decseparator</B></I></FONT></FONT>
+равен '.' - точка, и разделитель групп <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>groupseparator</B></I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+</I></FONT></FONT>цифр равен ' ' - пробелу.</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то преобразуется в <FONT FACE="Times New Roman"><FONT SIZE=3><B>Integer</B></FONT></FONT>
+со значение 0.</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>DateFormat</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>DateFormat(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>date-expr
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[  [ </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>,
+pattern </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+, localeLang </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+  </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Алиасные
+имена:</U></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+ </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>DF</B></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT>Преобразует
+заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>date-expr</B></I></FONT></FONT>
+в тип <CODE><FONT FACE="Courier New">java.lang.String</FONT></CODE>
+по заданному образцу <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern
+</B></I></FONT></FONT>и заданому <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>localeLang</B></I></FONT></FONT>.
+</FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><U><B>Параметры</B></U></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>:</B></FONT></FONT></P>
+<UL>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>date-expr
+	</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	</I></FONT></FONT><I>&mdash; </I>выражение типа <FONT FACE="Courier New">java.util.Date</FONT>,
+	которое преобразуется <I>в 	</I><FONT FACE="Courier New">java.lang.String</FONT><I>.</I></FONT></FONT></FONT></P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>pattern</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	  </I></FONT></FONT><I>-  </I>строковое выражения, представляющее
+	собой шаблон   	(<I>образец</I>) согласно которому дата должна быть
+	представлена <FONT FACE="Verdana">как</FONT><FONT FACE="Courier New"><FONT SIZE=3><I>
+		строка</I></FONT></FONT><I>. </I></FONT></FONT></FONT>
+	</P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>localeLang</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	 </I></FONT></FONT><I>- </I>строковый код страны, как определено
+	конструктором 	класса <FONT FACE="Courier New">java.util.Locale</FONT>.
+	Например &laquo;ru&raquo; - русский, а &laquo;en&raquo; -
+		английский.</FONT></FONT></FONT></P>
+</UL>
+<P><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>
+не задан, то преобразование производится с использованием  значения
+равного &quot;<FONT FACE="Courier New"><B>dd.MM.yy</B></FONT>&quot;.</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	Если не задан <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>localeLang</B></I></FONT></FONT>,
+то преобразование выполняется согласно текущим языковым установкам
+операционной системы  компьютера. Для правильного использования
+функции необходимо точно знать какой язык использован для
+представления даты в формате строки знаков. </FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Courier New"><I><B>date-expr</B></I></FONT><FONT FACE="Courier New">
+</FONT>равное <FONT FACE="Courier New"><I><B>null</B></I></FONT>,
+преобразуется в <FONT FACE="Courier New">java.util.Date</FONT> со
+значением D<FONT FACE="Courier New">ate(0) </FONT><FONT FACE="Verdana">перед
+преобразованием в строку знаков</FONT>.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Преобразование
+проводится с помощью класса <FONT FACE="Courier New">java.text.SimpleDateFormat</FONT>.
+</FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	<B>Пример</B>.
+Пусть строка <FONT FACE="Courier New"><I><B>date-expr</B></I></FONT>
+содержит значение типа <FONT FACE="Courier New">java.util.Date</FONT>,
+соответствующее <FONT FACE="Courier New"><B>12 июля 2005.</B></FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Для такой даты
+применим шаблон <FONT FACE="Courier New">'</FONT><FONT FACE="Courier New"><B>MMM,
+d yyyy</B></FONT><FONT FACE="Courier New">'.</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Если выполнить
+выражение <FONT FACE="Times New Roman"><FONT SIZE=3><B>D</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>ateFormat</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>(
+</FONT></FONT><FONT FACE="Courier New"><I><B>date-expr</B></I></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>,
+'</FONT></FONT><FONT COLOR="#0000ff"><FONT FACE="Times New Roman"><FONT SIZE=3>MMM,
+d yyyy</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>')</FONT></FONT>
+, то для <B>Windows</B> с русскими языковыми установками возвращается
+&laquo;<FONT COLOR="#0000ff">Июл, 12 2005&raquo;</FONT>.</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Если выполнить
+выражение <FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>DateFormat</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>(</FONT></FONT><FONT FACE="Courier New"><I><B>date-expr</B></I></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>,
+'MMM, d yyyy','</FONT></FONT><FONT COLOR="#ff0000"><FONT FACE="Times New Roman"><FONT SIZE=3>en</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>')
+, то возвращактся строка </FONT></FONT>&laquo;<FONT COLOR="#0000ff">Jul,
+12 2005&raquo;</FONT><FONT COLOR="#000000">, поскольку</FONT> третьим
+параметром мы <I>явно</I> проинформировали функцию, на каком языке
+представлена дата &mdash; английском.</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Функции преобразования</I></FONT></FONT></H4>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	В следующей
+таблице приведены функции,  специально предназначенные для
+преобразования значений выражений в заданный тип.</FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0>
+	<COL WIDTH=48*>
+	<COL WIDTH=50*>
+	<COL WIDTH=158*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Имя функции</FONT></FONT></TD>
+		<TD WIDTH=20% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Алиасы</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Описание</FONT></FONT></TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>BigDecimal</B></FONT></FONT></TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Dec</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=LEFT><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.math.BigDecimal</CODE>. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Double</B></FONT></FONT></TD>
+		<TD WIDTH=20% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Dou </FONT></FONT>
+		</TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=LEFT><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.lang.Double</CODE>. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Float
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>FL, REAL</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=LEFT><FONT FACE="Times New Roman"><FONT SIZE=3>Преобразует
+			заданное значение в тип <CODE>java.lang.Float</CODE>. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Long</B></FONT></FONT></TD>
+		<TD WIDTH=20% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Lo,BigInt</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.lang.Long</CODE> </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Integer
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Int </FONT></FONT>
+		</TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.lang.Integer</CODE>. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Short
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=20% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Small,
+			Smallint </FONT></FONT>
+		</TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.lang.Short</CODE>. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Byte</B></FONT></FONT></TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Tiny,
+			TyniInt </FONT></FONT>
+		</TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.lang.Byte</CODE>. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Timestamp</B></FONT></FONT></TD>
+		<TD WIDTH=20% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Tsm</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.sql.Timestamp</CODE> по
+			заданному образцу. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Date </B></FONT></FONT>
+		</TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Dat</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Преобразует
+			заданное значение в тип <CODE>java.util.Date</CODE> по заданному
+			образцу. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>$</B></FONT></FONT></TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><BR>
+		</TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Создает по
+			заданным как целые значениям года, месяца и даты месяца объект
+			типа <CODE>java.util.Date</CODE></FONT></FONT></TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Now</B></FONT></FONT></TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>today</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>Возвращает
+			текущую дату как объект типа <CODE>java.util.Date</CODE></FONT></FONT></TD>
+	</TR>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>BigDecimal</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>BigDecimal(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr,
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>scale
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U> <FONT FACE="Times New Roman"><FONT SIZE=3><B>Dec</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Если
+значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+то считается равным <FONT FACE="Courier New">java.lang.Integer </FONT>со
+значением 0.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Преобразует
+заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.math.BigDecimal</CODE>. </FONT></FONT></FONT>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	По
+умолчанию <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>scale</B></I></FONT></FONT>,
+если не задан принимается равным 2.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Для
+нового десятичного значения устанавливается значение масштаба:</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=3><B>setScale(
+</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>scale</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>,
+BigDecimal.ROUND_HALF_UP</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>)</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>;</FONT></FONT></FONT></FONT></FONT></P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>Double</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Double(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U> <FONT FACE="Times New Roman"><FONT SIZE=3><B>Dou</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.lang.Double</FONT> со
+значением 0.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.lang.Double</CODE>. </FONT></FONT></FONT>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>Float</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Float(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr 
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U> <FONT FACE="Times New Roman"><FONT SIZE=3><B>Fl, Real</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.lang.Float</FONT> со
+значением 0.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.lang.Float</CODE>. </FONT></FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>Long</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Long(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr 
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U> <FONT FACE="Times New Roman"><FONT SIZE=3><B>Lo, BigInt</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.lang.Long </FONT>со
+значением 0.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.lang.Long</CODE>. </FONT></FONT></FONT>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>Integer</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Integer(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr 
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B>Int</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.lang.Integer</FONT> со
+значением 0.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.lang.Integer</CODE>. </FONT></FONT></FONT>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>Short</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Short(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr 
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <FONT FACE="Times New Roman"><FONT SIZE=3><B>Small,Smallint</B></FONT></FONT></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.lang.Short</FONT> со
+значением 0.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.lang.Short</CODE>. </FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT></P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>Byte</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Byte(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr 
+</I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Алиасные
+имена:</U></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+ </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>Tiny,
+TyniInt </B></FONT></FONT>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равно <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.lang.Byte</FONT> со
+значением 0.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.lang.Byte</CODE>. </FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>Date</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Date(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[
+ [ </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>,
+pattern </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+, localeLang </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+  </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Алиасные
+имена:</U></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+ </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>Dat</B></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT>Преобразует
+заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE><FONT FACE="Courier New">java.util.Date</FONT></CODE> по
+заданному образцу </FONT></FONT>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern
+</B></I></FONT></FONT><FONT FACE="Verdana">и заданому </FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>localeLang</B></I></FONT></FONT>.
+</FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><U><B>Параметры</B></U></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>:</B></FONT></FONT></P>
+<UL>
+	<LI VALUE=1><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>expr
+	</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	</I></FONT></FONT><FONT FACE="Verdana"><I>&mdash; </I></FONT><FONT FACE="Verdana">строковое
+	выражения, которое преобразуется </FONT><FONT FACE="Verdana"><I>в
+		</I></FONT><FONT FACE="Courier New">java.util.Date</FONT><FONT FACE="Verdana"><I>.</I></FONT></FONT></FONT></FONT></P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>pattern</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	  </I></FONT></FONT><FONT FACE="Verdana"><I>-  </I></FONT><FONT FACE="Verdana">строковое
+	выражения, представляющее собой шаблон   	(</FONT><FONT FACE="Verdana"><I>образец</I></FONT><FONT FACE="Verdana">)
+	согласно которому представлена дата в строке</FONT><FONT FACE="Verdana"><I>
+	</I></FONT><B><FONT FACE="Courier New"><FONT SIZE=3><I>expr</I></FONT></FONT></B><FONT FACE="Verdana"><I>.
+	</I></FONT></FONT></FONT></FONT>
+	</P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>localeLang</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	 </I></FONT></FONT><FONT FACE="Verdana"><I>- </I></FONT><FONT FACE="Verdana">строковый
+	код страны, как определено конструктором 	класса </FONT><FONT FACE="Courier New">java.util.Locale</FONT><FONT FACE="Verdana">.
+	Например &laquo;ru&raquo; - русский, а &laquo;en&raquo; -
+		английский.</FONT></FONT></FONT></FONT></P>
+</UL>
+<P><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	Применяется, когда строковое
+выражение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+содержит дату в формате,</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>совпадающим с <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>.
+</FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>
+не задан, то преобразование производится с использованием  значения
+равного &quot;<FONT FACE="Courier New"><B>dd.MM.yy</B></FONT>&quot;.</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	Если не задан <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>localeLang</B></I></FONT></FONT>,
+то преобразование выполняется согласно текущим языковым установкам
+операционной системы  компьютера. Для правильного использования
+функции необходимо точно знать какой язык использован для
+представления даты в формате строки знаков. Пример ниже, показывает
+как правильного использовать функцию <FONT FACE="Times New Roman"><FONT SIZE=3>Timestamp</FONT></FONT>.</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равное <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.util.Date</FONT> со
+значением D<FONT FACE="Courier New">ate</FONT><FONT FACE="Courier New">(0)</FONT>.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE><FONT FACE="Courier New">java.util.Date</FONT></CODE>. </FONT></FONT></FONT>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Преобразование
+проводится с помощью класса <FONT FACE="Courier New">java.text.SimpleDateFormat</FONT>.
+</FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	<B>Пример</B>.
+Пусть строка <FONT FACE="Courier New"><I><B>expr</B></I></FONT>
+содержит значение '<FONT FACE="Courier New"><B>Jul, 12 2005</B></FONT>'
+, т.е. Краткое название месяца, число месяца и год. </FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Для такой даты
+применяется шаблон <FONT FACE="Courier New">'</FONT><FONT FACE="Courier New"><B>MMM,
+d yyyy</B></FONT><FONT FACE="Courier New">'.</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Если выполнить
+выражение D<FONT FACE="Times New Roman"><FONT SIZE=3><B>ate</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>('</FONT></FONT><FONT COLOR="#0000ff"><FONT FACE="Times New Roman"><FONT SIZE=3>Jul,
+12 2005</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>',
+'</FONT></FONT><FONT COLOR="#0000ff"><FONT FACE="Times New Roman"><FONT SIZE=3>MMM,
+d yyyy</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>')</FONT></FONT>
+, то для <B>Windows</B> с русскими языковыми установками скорее всего
+будет выброшено исключение. Если бы значением expr было '<FONT COLOR="#0000ff">Июл,
+12 2005</FONT>' , то функция сработает правильно. Но не всегда
+приложение само создает данные. Если, например, у Вас появилась база
+данных, у которой есть таблица со строковым полем для хранения даты и
+дата хранится по указанному выше шаблону, т.е. '<FONT COLOR="#0000ff">MMM,
+d yyyy</FONT>', но краткие имена введены на английском языке, то
+ничего не остается как воспользоваться функцией <FONT FACE="Times New Roman"><FONT SIZE=3><B>Date</B></FONT></FONT>,
+как приведено ниже:</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>Date</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>('Jul,
+12 2005','MMM, d yyyy','</FONT></FONT><FONT COLOR="#ff0000"><FONT FACE="Times New Roman"><FONT SIZE=3>en</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>')
+</FONT></FONT></FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>здесь, третьим
+параметром мы <I>явно</I> проинформировали функцию, на каком языке
+представлена дата &mdash; английском.</FONT></FONT><DL>
+	<DT>
+	<BR>
+</DL>
+<P><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Timestamp</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Timestamp(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>expr </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[
+ [ </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>,
+pattern </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+, localeLang </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+  </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Алиасное
+имя:</U></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+ </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>Tsm</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT>Преобразует
+заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE><FONT FACE="Courier New">java.sql.Timestamp</FONT></CODE>
+по заданному образцу <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>.
+</FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><U><B>Параметры</B></U></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>:</B></FONT></FONT></P>
+<UL>
+	<LI VALUE=1><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>expr
+	</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	</I></FONT></FONT><FONT FACE="Verdana"><I>&mdash; </I></FONT><FONT FACE="Verdana">строковое
+	выражения, которое преобразуется </FONT><FONT FACE="Verdana"><I>в
+	</I></FONT><FONT FACE="Courier New">java.sql.Timestamp</FONT><FONT FACE="Verdana"><I>.</I></FONT></FONT></FONT></FONT></P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>pattern</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	  </I></FONT></FONT><FONT FACE="Verdana"><I>-  </I></FONT><FONT FACE="Verdana">строковое
+	выражения, представляющее собой шаблон   	(</FONT><FONT FACE="Verdana"><I>образец</I></FONT><FONT FACE="Verdana">)
+	согласно которому представлена дата в строке</FONT><FONT FACE="Verdana"><I>
+	</I></FONT><B><FONT FACE="Courier New"><FONT SIZE=3><I>expr</I></FONT></FONT></B><FONT FACE="Verdana"><I>.
+	</I></FONT></FONT></FONT></FONT>
+	</P>
+	<LI><P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B><FONT FACE="Courier New"><FONT SIZE=3><I>localeLang</I></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+	 </I></FONT></FONT><FONT FACE="Verdana"><I>- </I></FONT><FONT FACE="Verdana">строковый
+	код страны, как определено конструктором 	класса </FONT><FONT FACE="Courier New">java.util.Locale</FONT><FONT FACE="Verdana">.
+	Например &laquo;ru&raquo; - русский, а &laquo;en&raquo; -
+		английский.</FONT></FONT></FONT></FONT></P>
+</UL>
+<P><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	Применяется, когда строковое
+выражение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+содержит дату в формате,</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>совпадающим с <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>.
+</FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Если <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>pattern</B></I></FONT></FONT>
+не задан, то преобразование производится с использованием  значения
+равного &quot;<FONT FACE="Courier New"><B>dd.MM.yy</B></FONT>&quot;.</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT><P ALIGN=JUSTIFY>
+<FONT FACE="Verdana"><FONT SIZE=2>	Если не задан <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>localeLang</B></I></FONT></FONT>,
+то преобразование выполняется согласно текущим языковым установкам
+операционной системы  компьютера. Для правильного использования
+функции необходимо точно знать какой язык использован для
+представления даты в формате строки знаков. Пример ниже, показывает
+как правильного использовать функцию <FONT FACE="Courier New">Timestamp</FONT>.</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Значение
+<FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+равное <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>null</B></I></FONT></FONT>,
+преобразуется в <FONT FACE="Courier New">java.sql.Timestamp</FONT> со
+значением <FONT FACE="Courier New">Timestamp</FONT><FONT FACE="Courier New">(0)</FONT>.</FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Иначе,
+преобразует заданное значение <FONT FACE="Times New Roman"><FONT SIZE=3><I><B>expr</B></I></FONT></FONT>
+в тип <CODE>java.sql.Timestamp</CODE>. </FONT></FONT></FONT>
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Преобразование
+проводится с помощью класса <FONT FACE="Courier New">java.text.SimpleDateFormat</FONT>.
+</FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	<B>Пример</B>.
+Пусть строка <FONT FACE="Courier New"><I><B>expr</B></I></FONT>
+содержит значение '<FONT FACE="Courier New"><B>Jul, 12 2005</B></FONT>'
+, т.е. Краткое <I>название месяца, число месяца </I>и <I>год</I>. </FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Для такой даты
+применяется шаблон <FONT FACE="Courier New">'</FONT><FONT FACE="Courier New"><B>MMM,
+d yyyy</B></FONT><FONT FACE="Courier New">'.</FONT></FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Если выполнить
+выражение <FONT FACE="Times New Roman"><FONT SIZE=3><B>Timestamp</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>('</FONT></FONT><FONT COLOR="#0000ff"><FONT FACE="Times New Roman"><FONT SIZE=3>Jul,
+12 2005</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>',
+'</FONT></FONT><FONT COLOR="#0000ff"><FONT FACE="Times New Roman"><FONT SIZE=3>MMM,
+d yyyy</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>')</FONT></FONT>
+, то для <B>Windows</B> с русскими языковыми установками скорее всего
+будет выброшено исключение. Если бы значением expr было '<FONT COLOR="#0000ff">Июл,
+12 2005</FONT>' , то функция сработает правильно. Но не всегда
+приложение само создает данные. Если, например, у Вас появилась база
+данных, у которой есть таблица со строковым полем для хранения даты и
+дата хранится по указанному выше шаблону, т.е. '<FONT COLOR="#0000ff">MMM,
+d yyyy</FONT>', но краткие имена введены на английском языке, то
+ничего не остается как воспользоваться функцией <FONT FACE="Times New Roman"><FONT SIZE=3><B>Timestamp</B></FONT></FONT>,
+как приведено ниже:</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>		<FONT FACE="Times New Roman"><FONT SIZE=3>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><B>Timestamp</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>('Jul,
+12 2005','MMM, d yyyy','</FONT></FONT><FONT COLOR="#ff0000"><FONT FACE="Times New Roman"><FONT SIZE=3>en</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>')
+</FONT></FONT></FONT></FONT>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>здесь, третьим
+параметром мы <I>явно</I> проинформировали функцию, на каком языке
+представлена дата &mdash; английском.</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция <FONT COLOR="#800000"><I>$</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	$</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>(
+ </FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=3><I>year,
+month, day</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT><FONT FACE="Verdana"><B>Параметры:</B></FONT></FONT></FONT></P>
+<UL>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Courier New"><I><B>year</B></I></FONT><FONT FACE="Verdana"><B>
+	</B></FONT><FONT FACE="Verdana">&mdash; целочисленное выражение &mdash;
+	год.</FONT></FONT></FONT></P>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Courier New"><I><B>month</B></I></FONT><FONT FACE="Verdana"><B>
+	</B></FONT><FONT FACE="Verdana">&mdash; целочисленное выражение &mdash;
+	месяц.</FONT></FONT></FONT></P>
+	<LI><P><FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Courier New"><I><B>day</B></I></FONT><FONT FACE="Verdana"><B>
+	</B></FONT><FONT FACE="Verdana">&mdash; целочисленное выражение &mdash;
+	день месяца.</FONT></FONT></FONT></P>
+</UL>
+<P ALIGN=JUSTIFY><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Создает
+и возвращает объект типа <FONT FACE="Courier New">java.util.Date</FONT>
+по заданным целочисленным значениям <I>года</I>, <I>месяца</I> и дня
+<I>месяца</I>.</FONT></FONT></FONT></P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Now</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Now()</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Алиасное
+имя:</U></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+ </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>today</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	Возвращает
+значение текущей даты, установленной в системе, типа <FONT FACE="Courier New">java.util.Date</FONT>.</FONT></FONT><P ALIGN=JUSTIFY>
+<BR>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I>Функции состояния</I></FONT></FONT></H4>
+<P ALIGN=JUSTIFY><FONT FACE="Verdana"><FONT SIZE=2>	В следующей
+таблице приведены функции,  специально предназначенные для
+преобразования значений выражений в заданный тип.</FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0>
+	<COL WIDTH=48*>
+	<COL WIDTH=50*>
+	<COL WIDTH=158*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Имя функции</FONT></FONT></TD>
+		<TD WIDTH=20% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Алиасы</FONT></FONT></TD>
+		<TD WIDTH=62% BGCOLOR="#ccffff">
+			<P ALIGN=CENTER><FONT FACE="Verdana"><FONT SIZE=2>Описание</FONT></FONT></TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>IsDeleted</B></FONT></FONT></TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>IsDel</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=LEFT><FONT FACE="Verdana"><FONT SIZE=2>Возвращает
+			значение <CODE>true</CODE> если текущий ряд удален для заданного
+			алиаса таблицы или алиаса по умолчанию, если опущен параметр. Если
+			ряд не удален возвращает <CODE>false</CODE>. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>RowState</B></FONT></FONT></TD>
+		<TD WIDTH=20% BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER> 
+		</TD>
+		<TD WIDTH=62% BGCOLOR="#e6e6e6">
+			<P ALIGN=LEFT><FONT FACE="Verdana"><FONT SIZE=2>Возвращает
+			значение свойства <CODE>editingState</CODE> текущего ряда для
+			заданного алиаса таблицы или алиаса по умолчанию, если опущен
+			параметр. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>Depth
+			</B></FONT></FONT>
+		</TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><BR>
+		</TD>
+		<TD WIDTH=62%>
+			<P ALIGN=LEFT><FONT FACE="Times New Roman"><FONT SIZE=3>Возвращает
+			значение </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=2>RowState.getDepth()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=3>
+			для текущего ряда и заданного алиаса таблицы или алиаса по
+			умолчанию, если опущен параметр. </FONT></FONT>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>RowNo</B></FONT></FONT></TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><BR>
+		</TD>
+		<TD WIDTH=62%>
+			<P ALIGN=LEFT>Возвращает индекс текущего ряда для заданного алиаса
+			таблицы или алиаса по умолчанию, если опущен параметр. 
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=19%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3><B>RowValue</B></FONT></FONT></TD>
+		<TD WIDTH=20%>
+			<P ALIGN=CENTER><FONT FACE="Times New Roman"><FONT SIZE=3>Rv</FONT></FONT></TD>
+		<TD WIDTH=62%>
+			<P ALIGN=LEFT>Возвращает значение ячейки ряда для заданного
+			индекса таблицы и заданного имени колонки. 
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>IsDeleted</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>IsDeleted(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I> </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+alias </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><U>Алиасные
+имена:</U></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+ </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>IsDel</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Times New Roman"><FONT SIZE=3><B>	</B></FONT></FONT><DL>
+	<DT><P>
+	<FONT FACE="Verdana"><FONT SIZE=2><FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT>Возвращает
+	значение <CODE><FONT FACE="Courier New">true</FONT></CODE> если
+	текущий ряд удален для заданного алиаса таблицы или алиаса по
+	умолчанию, если опущен параметр. Если ряд не удален возвращает
+	<CODE><FONT FACE="Courier New">false</FONT></CODE>. </FONT></FONT>
+</DL>
+<P ALIGN=JUSTIFY><BR>
+<P ALIGN=JUSTIFY><BR>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>RowState</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>RowState(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I> </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+alias </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT></FONT><FONT COLOR="#000000">Возвращает
+значение свойства </FONT><CODE><FONT COLOR="#000000"><FONT FACE="Courier New">editingState</FONT></FONT></CODE><FONT COLOR="#000000">
+текущего ряда для заданного алиаса таблицы или алиаса по умолчанию,
+если опущен параметр. </FONT><B>	</B></FONT></FONT></P>
+<DL>
+	<DT><P><BR>
+</DL>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>Depth</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>Depth(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I> </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+alias </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	Возвращает
+значение </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=2>RowState.getDepth()</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+для текущего ряда и заданного алиаса таблицы или алиаса по умолчанию,
+если опущен параметр. </FONT></FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>RowNo</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>RowNo(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I> </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>[</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+alias </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>]</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+ </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">Возвращает
+индекс текущего ряда для заданного алиаса таблицы или алиаса по
+умолчанию, если опущен параметр. </FONT></FONT></FONT></FONT>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Verdana">	Необязательный
+параметр </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=3><I><B>alias</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">
+определяет строковое значение алиаса таблицы.</FONT></FONT></FONT></FONT></P>
+<DL>
+	<DT><P><BR>
+</DL>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>RowValue</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>RowValue(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I> 
+rowIndex-expr, columnName   </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<U>Алиасные
+имена:</U>  <B><FONT FACE="Times New Roman"><FONT SIZE=3>Rv</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">Возвращает
+значение ячейки ряда для заданного </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><I>индекса</I></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">
+таблицы и заданного </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><I>имени</I></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><I>колонки</I></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">.</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=3>
+</FONT></FONT></FONT></FONT></FONT>
+</P>
+<P ALIGN=LEFT><FONT COLOR="#800000"><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Verdana">	</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><U><B>Параметры</B></U></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><U>:</U></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<UL>
+	<LI><P ALIGN=LEFT><FONT COLOR="#800000"><FONT FACE="Verdana"><FONT SIZE=2><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>rowIndex-expr</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>
+	 - </FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">выражение
+	целочисленного типа, определяющее индекс ряда;</FONT></FONT></FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT><FONT COLOR="#800000"><FONT COLOR="#000000">
+	<FONT FACE="Verdana"><FONT SIZE=2><I><FONT FACE="Times New Roman"><FONT SIZE=3><B>columnName</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>
+	 - </FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">имя
+	колонки таблицы типа </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New">tdo.Table</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">,
+	содержащей ряд.</FONT></FONT></FONT></FONT></FONT></P>
+</UL>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<H4><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=3><I>Специальные
+функции</I></FONT></FONT></FONT></H4>
+<P><BR><BR>
+</P>
+<P><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Verdana">	В
+настоящий момент только одна функция определена в данной категории &mdash;
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><B>IIF</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">.</FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<H5><FONT FACE="Arial"><FONT SIZE=2>Функция  <FONT COLOR="#800000"><I>IIF</I></FONT></FONT></FONT></H5>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2><B>	</B><U>Синтаксис:</U></FONT></FONT></FONT></P>
+<P><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>	<FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>IIF(
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=3><I> 
+cond-expr, value1, value2   </I></FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=3>)</FONT></FONT></B></FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3>	</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">Возвращает
+значение </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>value1</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">,
+если </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>cond-expr</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">
+равен </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New">true</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">.
+Возвращает  </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I><B>value2</B></I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><I>
+</I></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">в
+противном случае.</FONT></FONT></FONT></FONT></P>
+<P ALIGN=LEFT><FONT COLOR="#800000"><FONT FACE="Verdana"><FONT SIZE=2><FONT COLOR="#000000"><FONT FACE="Verdana">	</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><U><B>Параметры</B></U></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><U>:</U></FONT></FONT></FONT></FONT></FONT></P>
+<UL>
+	<LI><P ALIGN=LEFT><FONT COLOR="#800000"><FONT FACE="Verdana"><FONT SIZE=2><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>cond-expr
+	&mdash;</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">
+	выражение булевого типа;</FONT></FONT></I></FONT></FONT></FONT></P>
+	<LI><P ALIGN=LEFT><FONT COLOR="#800000"><FONT FACE="Verdana"><FONT SIZE=2><I><FONT COLOR="#000000"><FONT FACE="Verdana"><B>value1</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">
+	&mdash; </FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">значение,
+	возвращаемое функцией,</FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana">
+	</FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">когда</FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana">
+	</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>cond-expr
+	</B></FONT></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">равно
+	</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New">true</FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>.
+	</B></FONT></FONT></FONT></I></FONT></FONT></FONT>
+	</P>
+	<LI><P ALIGN=LEFT><FONT COLOR="#800000"><FONT FACE="Verdana"><FONT SIZE=2><I><FONT COLOR="#000000"><FONT FACE="Verdana"><B>value2</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana">
+	&mdash; </FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">значение,
+	возвращаемое функцией,</FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana">
+	</FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">когда</FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Verdana"><B>
+	</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=3><B>cond-expr</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman">
+	</FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana">равно
+	</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New">true</FONT></FONT><I><FONT COLOR="#000000"><FONT FACE="Times New Roman">.
+	</FONT></FONT></I></FONT></FONT></FONT>
+	</P>
+</UL>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<H4><FONT FACE="Arial"><FONT SIZE=3><I><FONT COLOR="#000000"><FONT FACE="Verdana">Функции-оболочки
+пакета </FONT></FONT><FONT COLOR="#800000"><FONT FACE="Courier New"><B>java.Math</B></FONT></FONT></I></FONT></FONT></H4>
+<P><BR><BR>
+</P>
+<P><I><FONT COLOR="#000000"><FONT FACE="Courier New"><B>	</B></FONT></FONT></I><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>Для
+каждой из функций пакета </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=2><B>java</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=2>.</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=2><B>Math</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana"><FONT SIZE=2>
+определена одноименная функция выражений.</FONT></FONT></FONT></P>
+<P><BR><BR>
+</P>
+<TABLE WIDTH=803 BORDER=1 CELLPADDING=2 CELLSPACING=4>
+	<COL WIDTH=132>
+	<COL WIDTH=649>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>ABS</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>abs</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>ACOS</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>acos</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>ASIN</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>asin</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>ATAN</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>atan</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>CEIL</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>ceil</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>COS</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>cos</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>SIN</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=2>
+			</FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>sin</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>TAN</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>tan</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>EXP</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>exp</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>FLOOR</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=2>
+			</FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>floor</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>LOG</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>log</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>RINT</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>rint</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>ROUND</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>round</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>SQRT</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>sqrt</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>TODEGREES</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>toDegrees</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>TORADIANS</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=2>
+			</FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>toRadians</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>ATAN2</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=2>
+			</FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>atan2</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double,Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>POW</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>pow</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double,Double)</FONT></FONT></CODE></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>IEEEREMAINDER</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<DL>
+				<DT><P> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует функции
+				из пакета   </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>IEEEremainder</B></FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2>(Double,Double)</FONT></FONT></CODE><FONT FACE="Courier New"><FONT SIZE=2>
+				</FONT></FONT>
+				<DT><P><BR>
+			</DL>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=132 BGCOLOR="#e6e6e6">
+			<P ALIGN=CENTER><FONT COLOR="#800000"><FONT FACE="Courier New"><FONT SIZE=2><B>RANDOM</B></FONT></FONT></FONT></TD>
+		<TD WIDTH=649>
+			<P ALIGN=LEFT> <FONT FACE="Verdana"><FONT SIZE=2>Соответствует
+			функции из пакета   </FONT></FONT><CODE><FONT FACE="Courier New"><FONT SIZE=2>java.Math.</FONT></FONT></CODE><CODE><FONT FACE="Courier New"><FONT SIZE=2><B>random()</B></FONT></FONT></CODE></TD>
+	</TR>
+</TABLE>
+<P ALIGN=LEFT><BR><BR>
+</P>
+</BODY>
+</HTML>
