@@ -1,0 +1,247 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  </head>
+  <body>
+  <table border="1">
+<thead>
+<tr>
+<th>Имя</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UpperCase</td>
+<td>Алиасы: Upper, U. Переводит символы строки в верхний регистр</td>
+</tr>
+<tr>
+<td>LowerCase</td>
+<td>Алиасы: Lower, L. Переводит символы строки в нижний регистр</td>
+</tr>
+<tr>
+<td>Proper</td>
+<td>Алиасы: P. Переводит самый первый символ строки в верхний регистр</td>
+</tr>
+<tr>
+<td>Header</td>
+<td>Алиасы: Hd. Переводит самый первый символ каждого слова строки в верхний
+    регистр
+</td>
+</tr>
+<tr>
+<td>Trim</td>
+<td>Алиасы: Tr. Отсекает крайние символы пробела слева и справа строки
+</td>
+</tr>
+<tr>
+<td>Padl</td>
+<td>Алиасы: PL. В зависимости от параметров функции и типа операнда добавляет
+    к строке слева заданное количество символов
+</td>
+</tr>
+<tr>
+<td>Padr</td>
+<td>Алиасы: Pr. В зависимости от параметров функции и типа операнда добавляет
+    к строке справа заданное количество символов
+</td>
+</tr>
+<tr>
+<td>Substring</td>
+<td>Алиасы: Substr. выделяет подстроку из заданной строки
+</td>
+</tr>
+<tr>
+<td>NumberFormat</td>
+<td>Алиасы: NumFormat, NF. Форматирует числовое значение согласно заданному
+        шаблону и возвращает строковое представление
+</td>
+</tr>
+
+<tr>
+<td>RowValue</td>
+<td>Алиасы: Rv. Возвращает значение ячейки ряда для заданного индекса таблицы и
+заданного имени колонки.
+</td>
+</tr>
+<tr>
+<td>IIF</td>
+<td>Возвращает одно из двух заданных значений, в зависимости от заданного
+    условия.
+</td>
+</tr>
+<tr>
+<td>ROWNO</td>
+<td>Возвращает индекс текущего ряда для заданного алиаса таблицы или
+   алиаса по умолчанию, если опущен параметр.
+</td>
+</tr>
+<tr>
+<td>RANDOM</td>
+<td>Возвращает значение <code>java.Math.random()</code>
+</td>
+</tr>
+<tr>
+<td>DEPTH</td>
+<td>Возвращает значение {@link tdo.RowState#getDepth() } для текущего ряда и
+    заданного алиаса таблицы или алиаса по умолчанию, если опущен параметр.
+</td>
+</tr>
+
+<tr>
+<td>ISDELETED</td>
+<td>Алиасы: IsDel. Возвращает значение <code>true</code> если текущий ряд удален
+   для заданного алиаса таблицы или алиаса по умолчанию, если опущен параметр.
+   Если ряд не удален возвращает <code>false</code>.
+</td>
+</tr>
+<tr>
+<td>ROWSTATE</td>
+<td>Возвращает значение свойства <code>editingState</code> текущего ряда
+    для заданного алиаса таблицы или алиаса по умолчанию, если опущен параметр.
+</td>
+</tr>
+<tr>
+<td>BIGDECIMAL</td>
+<td>Алиасы: Dec. Преобразует заданное значение в тип
+    <code>java.math.BigDecimal</code>.
+ </td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td>Алиасы: Dou. Преобразует заданное значение в тип
+    <code>java.lang.Double</code>.
+ </td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td>Алиасы: FL, REAL. Преобразует заданное значение в тип
+    <code>java.lang.Float</code>.
+ </td>
+</tr>
+<tr>
+<td>LONG</td>
+<td>Алиасы: LO, BigInt. Преобразует заданное значение в тип
+    <code>java.lang.Long</code>.
+ </td>
+</tr>
+<tr>
+<td>INTEGER</td>
+<td>Алиасы: Int. Преобразует заданное значение в тип
+    <code>java.lang.Integer</code>.
+ </td>
+</tr>
+<tr>
+<td>SHORT</td>
+<td>Алиасы: Small, Smallint. Преобразует заданное значение в тип
+    <code>java.lang.Short</code>.
+ </td>
+</tr>
+<tr>
+<td>BYTE</td>
+<td>Алиасы: Tiny, TyniInt. Преобразует заданное значение в тип
+    <code>java.lang.Byte</code>.
+ </td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>Алиасы: TSM. Преобразует заданное значение в тип
+    <code>java.sql.Timestamp</code> по заданному образцу.
+ </td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>Алиасы: TSM. Преобразует заданное значение в тип
+    <code>java.sql.Timestamp</code> по заданному образцу.
+ </td>
+</tr>
+
+<tr>
+<td>ABS</td>
+<td>Соответствует  функции из пакета <code>java.Math.abs(Double)</code></td>
+</tr>
+<tr>
+<td>ACOS</td>
+<td>Соответствует  функции из пакета <code>java.Math.acos(Double)</code></td>
+</tr>
+<tr>
+<td>ASIN</td>
+<td>Соответствует  функции из пакета <code>java.Math.asin(Double)</code></td>
+</tr>
+<tr>
+<td>ATAN</td>
+<td>Соответствует  функции из пакета <code>java.Math.atan(Double)</code></td>
+</tr>
+<tr>
+<td>CEIL</td>
+<td>Соответствует  функции из пакета <code>java.Math.ceil(Double)</code></td>
+</tr>
+<tr>
+<td>COS</td>
+<td>Соответствует  функции из пакета <code>java.Math.cos(Double)</code></td>
+</tr>
+<tr>
+<td>SIN</td>
+<td>Соответствует  функции из пакета <code>java.Math.sin(Double)</code></td>
+</tr>
+<tr>
+<td>TAN</td>
+<td>Соответствует  функции из пакета <code>java.Math.tan(Double)</code></td>
+</tr>
+
+<tr>
+<td>EXP</td>
+<td>Соответствует  функции из пакета <code>java.Math.exp(Double)</code></td>
+</tr>
+<tr>
+<td>FLOOR</td>
+<td>Соответствует  функции из пакета <code>java.Math.floor(Double)</code></td>
+</tr>
+<tr>
+<td>LOG</td>
+<td>Соответствует  функции из пакета <code>java.Math.log(Double)</code></td>
+</tr>
+<tr>
+<td>RINT</td>
+<td>Соответствует  функции из пакета <code>java.Math.rint(Double)</code></td>
+</tr>
+<tr>
+<td>ROUND</td>
+<td>Соответствует  функции из пакета <code>java.Math.round(Double)</code></td>
+</tr>
+<tr>
+<td>SQRT</td>
+<td>Соответствует  функции из пакета <code>java.Math.sqrt(Double)</code></td>
+</tr>
+<tr>
+<td>TODEGREES</td>
+<td>Соответствует  функции из пакета <code>java.Math.toDegrees(Double)</code></td>
+</tr>
+<tr>
+<td>TORADIANS</td>
+<td>Соответствует  функции из пакета <code>java.Math.toRadians(Double)</code></td>
+</tr>
+<tr>
+<td>ATAN2</td>
+<td>Соответствует  функции из пакета <code>java.Math.atan2(Double,Double)</code></td>
+</tr>
+<tr>
+<td>POW</td>
+<td>Соответствует  функции из пакета <code>java.Math.pow(Double,Double)</code></td>
+</tr>
+<tr>
+<td>IEEEREMAINDER</td>
+<td>Соответствует  функции из пакета <code>java.Math.IEEEremainder(Double,Double)</code></td>
+</tr>
+</tbody>
+</table>
+
+    TODO write content
+  </body>
+</html>
