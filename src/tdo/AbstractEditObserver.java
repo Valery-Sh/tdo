@@ -6,7 +6,7 @@ package tdo;
 
 /**
  *
- * @author V. Shyshkin
+ * @author V.N Shyshkin
  */
 public class AbstractEditObserver implements EditObserver {
 
